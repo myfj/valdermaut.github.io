@@ -1,0 +1,1755 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head id="ctl00_Head1">
+    <link href="assets/css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/newc.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets/css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style4.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.fancybox.css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/jquery.fancybox.css" rel="stylesheet" />
+    <link href="css/flipclock.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" href="fonts/newfont.ttf" />
+    <script type="text/javascript" src="assets/js/modernizr.custom.86080.js"></script>
+
+    <meta charset="utf-8" />
+    <meta name="msvalidate.01" content="905FC1AF2088AE4F5FE1A502399BEE73" />
+    <title>
+        Dream Cine Studio
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="p:domain_verify" content="eb2b6da1080b8484301dab479590644b" />
+
+    <!-- ==============================================
+        Favicons
+        =============================================== -->
+    <link rel="shortcut icon" href="images/aboutlogo.jgg" />
+    <link rel="apple-touch-icon" href="images/aboutlogo.jgg" />
+    <link rel="apple-touch-icon" sizes="72x72" href="aimages/aboutlogo.jpg" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.jpg" />
+
+    <!-- ==============================================
+        CSS
+        =============================================== -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome.css" />
+    <link rel="stylesheet" href="assets/css/flexslider.css" />
+    <link rel="stylesheet" href="assets/css/styles-5.css" />
+    <link rel="stylesheet" href="assets/css/custom.css" />
+
+
+
+
+    <script type="text/javascript" src="assets/js/libs/modernizr.min.js"></script>
+    <script type="text/javascript" async defer src="assets/js/new1.js">
+    </script>
+
+</head>
+
+<body data-spy="scroll" data-target="#main-nav" data-offset="400" style="background: #ffffff;">
+
+    <script>
+        $(document).ready(function() {
+            var audioElement = document.createElement('audio');
+            var play = document.getElementById('musicplay');
+            audioElement.setAttribute('src', 'audio.mp3');
+            audioElement.setAttribute('autoplay', 'autoplay');
+            //audioElement.load()
+
+            $.get();
+
+            audioElement.addEventListener("load", function() {
+                audioElement.play();
+            }, true);
+
+            $('.play').click(function() {
+                document.getElementById('musicplay').style.display = "None";
+                document.getElementById('musicpause').style.display = "Block";
+                audioElement.play();
+
+            });
+
+            $('.pause').click(function() {
+                document.getElementById('musicplay').style.display = "Block";
+                document.getElementById('musicpause').style.display = "None";
+                audioElement.pause();
+
+            });
+        });
+    </script>
+
+    <script language="javascript" type="text/javascript">
+        function checkdevice() {
+
+            //document.getElementById('webloader').style.display="none";
+            //document.getElementById('mobileloader').style.display="none";
+            document.getElementById('imgweb').style.display = "none";
+            document.getElementById('imgmob').style.display = "none";
+            var isMobile = {
+                Android: function() {
+                    return navigator.userAgent.match(/Android/i);
+                },
+                BlackBerry: function() {
+                    return navigator.userAgent.match(/BlackBerry/i);
+                },
+                iOS: function() {
+                    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+                },
+                Opera: function() {
+                    return navigator.userAgent.match(/Opera Mini/i);
+                },
+                Windows: function() {
+                    return navigator.userAgent.match(/IEMobile/i);
+                },
+                any: function() {
+                    return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+                }
+            };
+            if (isMobile.any()) {
+                //document.getElementById('webloader').style.display="none";
+                //document.getElementById('mobileloader').style.display="";
+                document.getElementById('mob1').style.display = "";
+                document.getElementById('mob2').style.display = "";
+                document.getElementById('mob3').style.display = "";
+                document.getElementById('imgweb').style.display = "none";
+                document.getElementById('imgmob').style.display = "";
+
+            } else {
+                //document.getElementById('webloader').style.display="";
+                //document.getElementById('mobileloader').style.display="none";
+                document.getElementById('imgweb').style.display = "";
+                document.getElementById('imgmob').style.display = "none";
+            };
+            setInterval(function() {
+                hideloader();
+            }, 4000);
+        }
+
+        function hideloader() {
+            document.getElementById('webloader').style.display = "none";
+            document.getElementById('mobileloader').style.display = "none";
+        }
+    </script>
+
+    <header id="myCarousel" class="carousel slide parallax-bg" style="z-index: 0;" style="width:100%">
+        <audio id="sound1" src="assets/music.mp3" preload="auto"></audio>
+        <div id="page-loader">
+            <span class="page-loader-gif">
+           <img src="assets/images/preloader.png" id="imgweb" class="loader_img" style="position:fixed; top:40%; left:38%; display:none;"  >
+           <img src="assets/images/preloader.png" id="imgmob" class="loader_img" style="position:fixed; top:40%; left:0%; display:none;"  ></span></div>
+
+
+        <div class="music_div"><img id="musicplay" src="assets/images/play.png" onclick="document.getElementById('sound1').play();" class="music_img" onmouseover="this.style.opacity = 1.0;" onmouseout="this.style.opacity = 0.4;" style="opacity: 0.4;">
+            <img id="musicpause" src="assets/images/pause.png" onclick="document.getElementById('sound1').pause()" class="music_img" onmouseover="this.style.opacity = 1.0;" onmouseout="this.style.opacity = 0.4;">
+        </div>
+
+        <!-- Indicators -->
+        <ul class="cb-slideshow" style="z-index:-150;">
+
+            <li>
+
+                <span></span>
+                <div></div>
+            </li>
+            <li><span></span>
+                <div></div>
+            </li>
+            <li><span></span>
+                <div></div>
+            </li>
+            <li><span></span>
+                <div></div>
+            </li>
+            <li><span></span>
+                <div></div>
+            </li>
+            <li><span></span>
+                <div></div>
+            </li>
+            <li><span></span>
+                <div></div>
+            </li>
+
+        </ul>
+
+        <a class="scroll-button scrollto" href="#about" style="z-index:10000;"><i class="fa fa-angle-down"></i></a>
+    </header>
+
+    <div id="main-nav" class="navbar" style="z-index:200;">
+        <div class="container" class="roboto">
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="navbar-header w_100">
+
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#site-nav">
+                                <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                            </button>
+
+                        <!-- ======= LOGO ========-->
+                        <a style="height: 100px;" href="index.html">
+
+                            <img src="images/aboutlogo.png" alt="logo" style="width:105px" />
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="col-sm-10">
+
+                    <div id="site-nav" class="navbar-collapse collapse" style="margin-top: 15px; height: 1px;">
+                        <ul class="nav navbar-nav navbar-right" style="padding-top: 4px;">
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="About.html">About</a>
+                            </li>
+                            <li>
+                                <a href="drone.html">Drone</a>
+                            </li>
+                            <!--- <li>
+                                <a href="Index.aspx#team">Team</a>
+                            </li>-->
+                            <li><a href="Photography.html">Photography</a>
+
+
+                            </li>
+                            <li><a href="Film.html">Film</a>
+
+
+                            </li>
+                            <li>
+                                <a href="Multimediacat.html">Multimedia</a>
+                            </li>
+                            <li>
+                                <a href="Gallery.html">Gallery</a>
+                            </li>
+                            <li>
+                                <a href="Feedback.html">Feedback</a>
+
+
+                            </li>
+                            <li>
+                                <a href="Contact.html">Contact</a>
+
+
+                            </li>
+                            <li>
+
+                            </li>
+                        </ul>
+                    </div>
+                    <!--End navbar-collapse -->
+                </div>
+            </div>
+        </div>
+        <!--End container -->
+
+    </div>
+
+    <form name="aspnetForm" method="post" action="Index.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm" autocomplete="off" enctype="multipart/form-data">
+        <div>
+            <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+            <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTU4ODU0ODg2MQ9kFgJmD2QWAgIFD2QWAgIBDxYCHgdlbmN0eXBlBRNtdWx0aXBhcnQvZm9ybS1kYXRhFg4CAQ8PFgIeCEltYWdlVXJsBRpVcGxvYWQvMTE4MjAxODIyNjIxNDAxLmpwZ2RkAgMPDxYCHwEFGVVwbG9hZC8yODIwMTgwNDcxNDk0Ny5qcGdkZAIFDw8WAh8BBRlVcGxvYWQvMjgyMDE4MDQ3NDE4NjkuanBnZGQCBw8WAh4LXyFJdGVtQ291bnQCCxYWZg9kFgRmDxUDBmIxLmpwZwtQcmUgV2VkZGluZwExZAIBDxYCHgRUZXh0BQtQcmUgV2VkZGluZ2QCAQ9kFgRmDxUDBmIyLmpwZxdNZWhlbmRpIEhhbGRpIGFuZCBQb29qYQEyZAIBDxYCHwMFF01laGVuZGkgSGFsZGkgYW5kIFBvb2phZAICD2QWBGYPFQMGYjMuanBnClBvb2wgUGFydHkBM2QCAQ8WAh8DBQpQb29sIFBhcnR5ZAIDD2QWBGYPFQMGYjQuanBnB1NhbmdlZXQBNGQCAQ8WAh8DBQdTYW5nZWV0ZAIED2QWBGYPFQMGYjUuanBnD0JyaWRhbCBEcmVzcyB1cAE1ZAIBDxYCHwMFD0JyaWRhbCBEcmVzcyB1cGQCBQ9kFgRmDxUDBmI2LmpwZxlHcm9vbSBEcmVzcyB1cCBhbmQgQmFhcmF0ATZkAgEPFgIfAwUZR3Jvb20gRHJlc3MgdXAgYW5kIEJhYXJhdGQCBg9kFgRmDxUDBmI3LmpwZxdFbmdhZ2VtZW50IGFuZCBDb2NrdGFpbAE3ZAIBDxYCHwMFF0VuZ2FnZW1lbnQgYW5kIENvY2t0YWlsZAIHD2QWBGYPFQMGYjguanBnB1dlZGRpbmcBOGQCAQ8WAh8DBQdXZWRkaW5nZAIID2QWBGYPFQMGYjkuanBnCVJlY2VwdGlvbgE5ZAIBDxYCHwMFCVJlY2VwdGlvbmQCCQ9kFgRmDxUDB2IxMC5qcGcOVHJhaWxlciBQbGF0ZXMCMTBkAgEPFgIfAwUOVHJhaWxlciBQbGF0ZXNkAgoPZBYEZg8VAwdiMTEuanBnEUJlaGluZCB0aGUgc2NlbmVzAjExZAIBDxYCHwMFEUJlaGluZCB0aGUgc2NlbmVzZAIJDw8WAh8BBRlVcGxvYWQvNjgyMDE4MjA1NzkzMTguanBnZGQCEQ8WAh8CAgEWAmYPZBYCZg8VBRI3ODIwMTgxMDAzODQ3OC5qcGcYVXBsb2FkLzU4MjAxODc0MzkxMzMuanBnC01haGF2aXIgTGFsGUZvdW5kZXIgLSBBbWJpIE11bHRpbWVkaWEAZAITDxYCHwICBBYIZg9kFgJmDxUDGVVwbG9hZC81ODIwMTg3NDkyODM0Mi5qcGcEUmF2aRFQaG90b2dyYXBoZXIgSGVhZGQCAQ9kFgJmDxUDGVVwbG9hZC81ODIwMTg2NDQyMzU3Mi5qcGcMUm9oaXQgU2hhcm1hLVByb2R1Y3Rpb24gaGVhZCAvIENhbWVyYSBUZWFtIEFtYmkgTXVsdGltZWRpYWQCAg9kFgJmDxUDGFVwbG9hZC81ODIwMTg3ODQ3MTUyLmpwZwZTYXRpc2gMUGhvdG9ncmFwaGVyZAIDD2QWAmYPFQMZVXBsb2FkLzU4MjAxODcxNDE0ODkwLmpwZwpSYXZpIEt1bWFyMFBob3RvZ3JhcGh5IENoaWVmIEVkaXRvciAtIEFtYmkgTXVsdGltZWRpYSxJbmRpYWRkDpvpNLF/+Z2gF5L8WdGI8cvyi+g="
+            />
+        </div>
+
+        <script type="text/javascript">
+            //<![CDATA[
+            var theForm = document.forms['aspnetForm'];
+            if (!theForm) {
+                theForm = document.aspnetForm;
+            }
+
+            function __doPostBack(eventTarget, eventArgument) {
+                if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                    theForm.__EVENTTARGET.value = eventTarget;
+                    theForm.__EVENTARGUMENT.value = eventArgument;
+                    theForm.submit();
+                }
+            }
+            //]]>
+        </script>
+
+
+        <script src="/WebResource.axd?d=TNtdSEH8a49FqITovok1d_Zj3SURChH1uRFANVaIp2vuP3_2Cij75heEfShPWTn5qy6TDIPxQX5ns6qcJD1f_O4tsEo1&amp;t=636284381597151108" type="text/javascript"></script>
+
+
+        <script src="/WebResource.axd?d=4WTLwn0CCBhs89O78LKJmC6ASVaR5upsGJMKJmPrtA8H7Uyil65p_gFmC686GfB_yCX7QdzXqv2zJmutE4Td5m6w1N81&amp;t=636284381597151108" type="text/javascript"></script>
+        <script type="text/javascript">
+            //<![CDATA[
+            function WebForm_OnSubmit() {
+                if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+                return true;
+            }
+            //]]>
+        </script>
+
+        <div>
+
+            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="90059987" />
+            <input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0" />
+            <input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0" />
+            <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWDALF+J23AwLK9LfaCAKA4sljArTM//0IAr3Ms9YEAszD5skBAsT4hc4IAt6bsPkNAufGn6IIAuzBz9IEAvGihPoMAoPiyWM71B2/Y6ZQRq4tUCcDRdsSX6vgFg==" />
+        </div>
+
+        <section id="about" class="gray-bg " style="background:#ffffff; background-image:url('images/0a.png');background-repeat: no-repeat; background-position:center">
+            <div class="container" style="padding-bottom:0px;">
+                <div class="row">
+                    <h1 class="section-title"></h1>
+                    <div class="col-md-4" style="padding:35px">
+
+                        <img src="images/00.png" style="width:100%;margin:0 auto;" />
+                    </div>
+                    <div class="col-md-8">
+
+
+
+                        <h1 class="section-title" style="margin-top:25px;"><img src="images/ABOUT2.png" style="max-width:100%;PADDING: 7PX;" alt="About Us Ambimultimedia" class="mb0"></h1>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <p class="section-description" style="margin-top:-19px; text-align:justify;">
+
+                            We are renowned Indian Candid - traditinal Wedding Photography, Fashion, E-Commerce, & Customised Graphics Solutions. Our studio is based in New Delhi (India)from last 10 years. We are amongst the pioneers of the Indian Wedding Photography genre. We specialise
+                            in a fun, off-beat and candid style of wedding photography and guarantee memories from your wedding that will last a lifetime. We are proud to be amongst the photographers who defined this genre and offer everything you need
+                            to make your wedding memories eternal. We love creating wedding stories using a combination of still wedding photos and the wedding movie to create a comprehensive story that will stay in your family for generations to come.
+                            Welcome to our website and we look forward to being a part of your BIG DAY!
+
+
+                        </p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <img class="img-responsive img-center scrollimation fade-up in" src="images/aboutlogo.png" alt="Ambimultimedia" style="    margin-top: -87px;
+    margin-bottom: 0px;
+    ">
+
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-4">
+                        <h1 class="about_head ">What we do</h1>
+
+                        <p class="about_text" style="text-align:left;color:#000">With creating, we are literally bringing something into existence that didn’t exist before.” Just like wedding photography, Indian Wedding Movies have transformed from simple coverage into thematic documentary style wedding films.
+                            Our wedding movies are simple stories that tell the tale of your wedding, filmed in our inimitable fun and off-beat style. Using the very latest and best technology available, our wedding films are tailor made for your big
+                            day and perfectly complement your wedding photos.
+                        </p>
+
+                    </div>
+
+                    <div class="col-sm-4">
+
+                        <h1 class="about_head">What we love</h1>
+
+                        <p class="about_text" style="text-align:left;color:#000">I love the people I photograph. I mean, they’re my friends. Wherever the center of the light source is, you want that to be a little bit above the center of the couple’s eyes – something magical happens when you do this. Photography
+                            is the recording of strangeness and beauty with beguiling precision.</p>
+
+                    </div>
+
+                    <div class="col-sm-4">
+
+                        <h1 class="about_head">What we believe in</h1>
+
+                        <p class="about_text" style="text-align:left;color:#000">I’ve always believed that photography is a way to shape human perception. We work closely with our clients to understand their specific needs so that we can deliver the best possible project outcome. I really believe there are
+                            things nobody would see if I didn’t photograph them. The two most engaging powers of a photograph are to make new things familiar and familiar things new.</p>
+
+                    </div>
+
+                </div>
+                <!--End row-->
+
+                <!--End container -->
+            </div>
+
+        </section>
+
+        <section class="padding-top20" id="about" style="padding: 20px;">
+            <div class="sec-content margin-top50">
+                <div class="row clearfix">
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                        <div class="department">
+                            <div class="thumb" style="margin-top: 0px;">
+                                <img id="ctl00_ContentPlaceHolder1_ImGPHOTOGRAPHY" class="img-responsive" src="Upload/118201822621401.jpg" style="border-width:0px;margin-bottom:0px; " />
+
+                            </div>
+                            <div class="department-details" style="border: 1px solid #800a46;">
+                                <div class="round-style" style="border-top:1px solid #800a46"></div>
+                                <i class="icon flaticon-roses-bouquet"></i>
+                                <h4 class="title">PHOTOGRAPHY</h4><br />
+
+                                <a href="Photographycat.aspx?cat=PHOTOGRAPHY" class="thm-btn btn-xs btn-mr5"><i class="fa fa-angle-double-right"></i> Read More</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                        <div class="department">
+                            <div class="thumb" style="margin-top: 0px;">
+                                <img id="ctl00_ContentPlaceHolder1_Imgfilm" class="img-responsive" src="Upload/28201804714947.jpg" style="border-width:0px;margin-bottom:0px; " />
+
+                            </div>
+                            <div class="department-details" style="border: 1px solid #800a46;">
+                                <div class="round-style" style="border-top:1px solid #800a46"></div>
+                                <i class="icon flaticon-roses-bouquet"></i>
+                                <h4 class="title">FILM</h4><br />
+
+                                <a href="Film.aspx?Film" class="thm-btn btn-xs btn-mr5"><i class="fa fa-angle-double-right"></i> Read More</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                        <div class="department">
+                            <div class="thumb" style="margin-top: 0px;">
+                                <img id="ctl00_ContentPlaceHolder1_Imggraphics" class="img-responsive" src="Upload/28201804741869.jpg" style="border-width:0px;margin-bottom:0px; " />
+
+                            </div>
+                            <div class="department-details" style="border: 1px solid #800a46;">
+                                <div class="round-style" style="border-top:1px solid #800a46"></div>
+                                <i class="icon flaticon-roses-bouquet"></i>
+                                <h4 class="title">MULTIMEDIA & GRAPHICS</h4><br />
+
+                                <a href="Multimediacat.aspx?cat=MULTIMEDIA & GRAPHICS" class="thm-btn btn-xs btn-mr5"><i class="fa fa-angle-double-right"></i> Read More</a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!--End Call to Action -->
+
+
+        <section id="gallery-section" class="gallery-section  bg3" STYLE="BACKGROUND-REPEAT:no-repeat;padding-top: 50px;     background: none;">
+
+
+            <div class="container-fluid" style="padding-top:0px;padding-bottom: 5px;background-color:#800a46">
+                <div class="row clearfix">
+
+
+                    <div class="col-md-3 col-sm-4 col-xs-12 column wow fadeIn" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <figure class="image">
+
+                            <img class="img-responsive" src='Upload/b1.jpg' alt="one" style="    height: 300px;">
+                            <div class="overlay-box">
+                                <a href="#" class="link lightbox-image" style="text-decoration:none">
+                                    <span class="txt font-30">
+                            Pre Wedding</span></a>
+                            </div>
+                        </figure>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4 col-xs-12 column wow fadeIn" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <figure class="image">
+
+                            <img class="img-responsive" src='Upload/b2.jpg' alt="one" style="    height: 300px;">
+                            <div class="overlay-box">
+                                <a href="#" class="link lightbox-image" style="text-decoration:none">
+                                    <span class="txt font-30">
+                            Mehendi Haldi and Pooja</span></a>
+                            </div>
+                        </figure>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4 col-xs-12 column wow fadeIn" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <figure class="image">
+
+                            <img class="img-responsive" src='Upload/b3.jpg' alt="one" style="    height: 300px;">
+                            <div class="overlay-box">
+                                <a href="#" class="link lightbox-image" style="text-decoration:none">
+                                    <span class="txt font-30">
+                            Pool Party</span></a>
+                            </div>
+                        </figure>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4 col-xs-12 column wow fadeIn" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <figure class="image">
+
+                            <img class="img-responsive" src='Upload/b4.jpg' alt="one" style="    height: 300px;">
+                            <div class="overlay-box">
+                                <a href="#" class="link lightbox-image" style="text-decoration:none">
+                                    <span class="txt font-30">
+                            Sangeet</span></a>
+                            </div>
+                        </figure>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4 col-xs-12 column wow fadeIn" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <figure class="image">
+
+                            <img class="img-responsive" src='Upload/b5.jpg' alt="one" style="    height: 300px;">
+                            <div class="overlay-box">
+                                <a href="#" class="link lightbox-image" style="text-decoration:none">
+                                    <span class="txt font-30">
+                            Bridal Dress up</span></a>
+                            </div>
+                        </figure>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4 col-xs-12 column wow fadeIn" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <figure class="image">
+
+                            <img class="img-responsive" src='Upload/b6.jpg' alt="one" style="    height: 300px;">
+                            <div class="overlay-box">
+                                <a href="#" class="link lightbox-image" style="text-decoration:none">
+                                    <span class="txt font-30">
+                            Groom Dress up and Baarat</span></a>
+                            </div>
+                        </figure>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4 col-xs-12 column wow fadeIn" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <figure class="image">
+
+                            <img class="img-responsive" src='Upload/b7.jpg' alt="one" style="    height: 300px;">
+                            <div class="overlay-box">
+                                <a href="#" class="link lightbox-image" style="text-decoration:none">
+                                    <span class="txt font-30">
+                            Engagement and Cocktail</span></a>
+                            </div>
+                        </figure>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4 col-xs-12 column wow fadeIn" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <figure class="image">
+
+                            <img class="img-responsive" src='Upload/b8.jpg' alt="one" style="    height: 300px;">
+                            <div class="overlay-box">
+                                <a href="#" class="link lightbox-image" style="text-decoration:none">
+                                    <span class="txt font-30">
+                            Wedding</span></a>
+                            </div>
+                        </figure>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4 col-xs-12 column wow fadeIn" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <figure class="image">
+
+                            <img class="img-responsive" src='Upload/b9.jpg' alt="one" style="    height: 300px;">
+                            <div class="overlay-box">
+                                <a href="#" class="link lightbox-image" style="text-decoration:none">
+                                    <span class="txt font-30">
+                            Reception</span></a>
+                            </div>
+                        </figure>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4 col-xs-12 column wow fadeIn" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <figure class="image">
+
+                            <img class="img-responsive" src='Upload/b10.jpg' alt="one" style="    height: 300px;">
+                            <div class="overlay-box">
+                                <a href="#" class="link lightbox-image" style="text-decoration:none">
+                                    <span class="txt font-30">
+                            Trailer Plates</span></a>
+                            </div>
+                        </figure>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4 col-xs-12 column wow fadeIn" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <figure class="image">
+
+                            <img class="img-responsive" src='Upload/b11.jpg' alt="one" style="    height: 300px;">
+                            <div class="overlay-box">
+                                <a href="#" class="link lightbox-image" style="text-decoration:none">
+                                    <span class="txt font-30">
+                            Behind the scenes</span></a>
+                            </div>
+                        </figure>
+                    </div>
+
+
+                    <div class="col-md-3 col-sm-4 col-xs-12 column wow fadeIn" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <figure class="image" style="text-align:center;">
+                            <img id="ctl00_ContentPlaceHolder1_Imgfun" class="img-responsive" src="Upload/68201820579318.jpg" style="border-width:0px;    height: 300px;" />
+
+                            <div class="overlay-box">
+                                <div class="link " style="text-decoration:none">
+
+                                    <span class="txt font-30">Fun Photography<br />
+                            <input name="ctl00$ContentPlaceHolder1$Txtpass" type="password" id="ctl00_ContentPlaceHolder1_Txtpass" placeholder="Enter Password" class="form-control txt " style="    color: black;
+    height: 35px;
+    font-size: 15px;
+    margin-top: 20px;
+    width: 53%;
+    margin-left: 15px;" />
+    <br />
+    
+                            <span id="ctl00_ContentPlaceHolder1_RequiredFieldValidator1" style="color:Black;visibility:hidden;">*</span><br />
+                                    <input type="submit" name="ctl00$ContentPlaceHolder1$Button1" value="Go" id="ctl00_ContentPlaceHolder1_Button1" class="thm-btn btn-xs btn-mr5" /></span>
+
+                                </div>
+
+                            </div>
+                        </figure>
+                    </div>
+
+
+
+                </div>
+
+
+
+            </div>
+        </section>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+
+        <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+
+        <script src="js/jquery-3.1.1.js" type="text/javascript"></script>
+        <script>
+            let modalId = $('#image-gallery');
+
+            $(document)
+                .ready(function() {
+
+                    loadGallery(true, 'a.thumbnail');
+
+                    //This function disables buttons when needed
+                    function disableButtons(counter_max, counter_current) {
+                        $('#show-previous-image, #show-next-image')
+                            .show();
+                        if (counter_max === counter_current) {
+                            $('#show-next-image')
+                                .hide();
+                        } else if (counter_current === 1) {
+                            $('#show-previous-image')
+                                .hide();
+                        }
+                    }
+
+                    /**
+                     *
+                     * @param setIDs        Sets IDs when DOM is loaded. If using a PHP counter, set to false.
+                     * @param setClickAttr  Sets the attribute for the click handler.
+                     */
+
+                    function loadGallery(setIDs, setClickAttr) {
+                        let current_image,
+                            selector,
+                            counter = 0;
+
+                        $('#show-next-image, #show-previous-image')
+                            .click(function() {
+                                if ($(this)
+                                    .attr('id') === 'show-previous-image') {
+                                    current_image--;
+                                } else {
+                                    current_image++;
+                                }
+
+                                selector = $('[data-image-id="' + current_image + '"]');
+                                updateGallery(selector);
+                            });
+
+                        function updateGallery(selector) {
+                            let $sel = selector;
+                            current_image = $sel.data('image-id');
+                            $('#image-gallery-title')
+                                .text($sel.data('title'));
+                            $('#image-gallery-image')
+                                .attr('src', $sel.data('image'));
+                            disableButtons(counter, $sel.data('image-id'));
+                        }
+
+                        if (setIDs == true) {
+                            $('[data-image-id]')
+                                .each(function() {
+                                    counter++;
+                                    $(this)
+                                        .attr('data-image-id', counter);
+                                });
+                        }
+                        $(setClickAttr)
+                            .on('click', function() {
+                                updateGallery($(this));
+                            });
+                    }
+                });
+
+            // build key actions
+            $(document)
+                .keydown(function(e) {
+                    switch (e.which) {
+                        case 37: // left
+                            if ((modalId.data('bs.modal') || {})._isShown && $('#show-previous-image').is(":visible")) {
+                                $('#show-previous-image')
+                                    .click();
+                            }
+                            break;
+
+                        case 39: // right
+                            if ((modalId.data('bs.modal') || {})._isShown && $('#show-next-image').is(":visible")) {
+                                $('#show-next-image')
+                                    .click();
+                            }
+                            break;
+
+                        default:
+                            return; // exit this handler for other keys
+                    }
+                    e.preventDefault(); // prevent the default action (scroll / move caret)
+                });
+        </script>
+        <style>
+            .btn:focus,
+            .btn:active,
+            button:focus,
+            button:active {
+                outline: none !important;
+                box-shadow: none !important;
+            }
+            
+            #image-gallery .modal-footer {
+                display: block;
+            }
+            
+            .thumb {
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+        </style>
+        <!--   <section id="team" class="gray-bg padding-top-bottom" style="background: #FAEFD7;    background: #ffffff;">
+
+
+
+            <h1 class="section-title" style="margin-top:100px;"><img src="assets/images/meet_title.png" alt="Team" class="mb0" style="max-width: 100%;"></h1>
+            <p class="section-description">See the many faces of our team who create the stunning films, photographs and albums. Together we are &#34;Ambi Multimedia.&#34;</p>
+            <div class="container" id="teamparent">
+                <div class="row">
+                    <div class="row">
+
+                        <div class="col-xs-12 col-md-4 col-sm-12 team-member scrollimation  fade-up d1">
+
+
+                            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="" style="border:0px ; color:Black;  text-decoration:NONE;   padding: 0px; margin: 0px;" data-image='Upload/78201810038478.jpg' data-target="#image-gallery">
+                                <div class="member-thumb">
+                                    <img class="img-responsive img-center t_img" src='Upload/5820187439133.jpg' alt="" style="width:100%;     border:0px;">
+                                </div>
+                                <div class="member-details">
+                                    <h4>Mahavir Lal</h4>
+                                    <p class="title">Founder - Ambi Multimedia </p>
+                                    <p></p>
+                                </div>
+
+                            </a>
+
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" style="    WIDTH: 100%;">
+                            <div class="modal-content" style="background:none">
+
+                                <div class="modal-body" style="padding:0px;">
+                                    <button type="button" class="close" data-dismiss="modal" style="    font-size: 34px;
+    margin-right: 13px;"><span aria-hidden="true">×</span><span class="sr-only">Close</span>
+                        </button>
+
+                                    <img id="image-gallery-image" class="img-responsive col-md-12" src="">
+
+
+                                </div>
+                                <div class="modal-footer" style="display:none;">
+
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="jss/jssor.slider-27.4.0.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            jssor_1_slider_init = function() {
+
+                var jssor_1_options = {
+                    $AutoPlay: 1,
+                    $AutoPlaySteps: 3,
+                    $SlideDuration: 160,
+                    $SlideWidth: 400,
+
+                    $SlideSpacing: 3,
+                    $ArrowNavigatorOptions: {
+                        $Class: $JssorArrowNavigator$,
+                        $Steps: 3
+                    },
+                    $BulletNavigatorOptions: {
+                        $Class: $JssorBulletNavigator$
+                    }
+                };
+
+                var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+                /*#region responsive code begin*/
+
+                var MAX_WIDTH = 1220;
+
+                function ScaleSlider() {
+                    var containerElement = jssor_1_slider.$Elmt.parentNode;
+                    var containerWidth = containerElement.clientWidth;
+
+                    if (containerWidth) {
+
+                        var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                        jssor_1_slider.$ScaleWidth(expectedWidth);
+                    } else {
+                        window.setTimeout(ScaleSlider, 30);
+                    }
+                }
+
+                ScaleSlider();
+
+                $Jssor$.$AddEvent(window, "load", ScaleSlider);
+                $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+                $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+                /*#endregion responsive code end*/
+            };
+        </script>
+        <style>
+            /*jssor slider loading skin spin css*/
+            
+            .jssorl-009-spin img {
+                animation-name: jssorl-009-spin;
+                animation-duration: 1.6s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+            }
+            
+            @keyframes jssorl-009-spin {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+            /*jssor slider bullet skin 057 css*/
+            
+            .jssorb057 .i {
+                position: absolute;
+                cursor: pointer;
+            }
+            
+            .jssorb057 .i .b {
+                fill: none;
+                stroke: #fff;
+                stroke-width: 2000;
+                stroke-miterlimit: 10;
+                stroke-opacity: 0.4;
+            }
+            
+            .jssorb057 .i:hover .b {
+                stroke-opacity: .7;
+            }
+            
+            .jssorb057 .iav .b {
+                stroke-opacity: 1;
+            }
+            
+            .jssorb057 .i.idn {
+                opacity: .3;
+            }
+            /*jssor slider arrow skin 073 css*/
+            
+            .jssora073 {
+                display: block;
+                position: absolute;
+                cursor: pointer;
+            }
+            
+            .jssora073 .a {
+                fill: #ddd;
+                fill-opacity: .7;
+                stroke: #000;
+                stroke-width: 160;
+                stroke-miterlimit: 10;
+                stroke-opacity: .7;
+            }
+            
+            .jssora073:hover {
+                opacity: .8;
+            }
+            
+            .jssora073.jssora073dn {
+                opacity: .4;
+            }
+            
+            .jssora073.jssora073ds {
+                opacity: .3;
+                pointer-events: none;
+            }
+        </style>
+
+        <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1220px; height:600px; overflow:hidden;visibility:hidden; margin-bottom:20PX;">
+
+            <div class="row" data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1220px;height:600px;overflow:hidden;">
+
+
+
+
+                <div class="col-xs-12 col-md-3 col-sm-12 team-member scrollimation ">
+
+                    <div class="member-thumb">
+
+                        <img class="img-responsive img-center t_img" src='Upload/58201874928342.jpg' alt="">
+                    </div>
+
+                    <div class="member-details" style="text-align:center;">
+                        <h4>Ravi</h4>
+                        <p class="title">Photographer Head </p>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+
+                <div class="col-xs-12 col-md-3 col-sm-12 team-member scrollimation ">
+
+                    <div class="member-thumb">
+
+                        <img class="img-responsive img-center t_img" src='Upload/58201864423572.jpg' alt="">
+                    </div>
+
+                    <div class="member-details" style="text-align:center;">
+                        <h4>Rohit Sharma</h4>
+                        <p class="title">Production head / Camera Team Ambi Multimedia </p>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+
+                <div class="col-xs-12 col-md-3 col-sm-12 team-member scrollimation ">
+
+                    <div class="member-thumb">
+
+                        <img class="img-responsive img-center t_img" src='Upload/5820187847152.jpg' alt="">
+                    </div>
+
+                    <div class="member-details" style="text-align:center;">
+                        <h4>Satish</h4>
+                        <p class="title">Photographer </p>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+
+                <div class="col-xs-12 col-md-3 col-sm-12 team-member scrollimation ">
+
+                    <div class="member-thumb">
+
+                        <img class="img-responsive img-center t_img" src='Upload/58201871414890.jpg' alt="">
+                    </div>
+
+                    <div class="member-details" style="text-align:center;">
+                        <h4>Ravi Kumar</h4>
+                        <p class="title">Photography Chief Editor - Ambi Multimedia,India </p>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+            </div>
+
+
+            <div data-u="arrowleft" class="jssora073" style="width:50px;height:50px;top:0px;left:30px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+                <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <path class="a" d="M4037.7,8357.3l5891.8,5891.8c100.6,100.6,219.7,150.9,357.3,150.9s256.7-50.3,357.3-150.9 l1318.1-1318.1c100.6-100.6,150.9-219.7,150.9-357.3c0-137.6-50.3-256.7-150.9-357.3L7745.9,8000l4216.4-4216.4 c100.6-100.6,150.9-219.7,150.9-357.3c0-137.6-50.3-256.7-150.9-357.3l-1318.1-1318.1c-100.6-100.6-219.7-150.9-357.3-150.9 s-256.7,50.3-357.3,150.9L4037.7,7642.7c-100.6,100.6-150.9,219.7-150.9,357.3C3886.8,8137.6,3937.1,8256.7,4037.7,8357.3 L4037.7,8357.3z"></path>
+            </svg>
+            </div>
+            <div data-u="arrowright" class="jssora073" style="width:50px;height:50px;top:0px;right:30px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+                <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <path class="a" d="M11962.3,8357.3l-5891.8,5891.8c-100.6,100.6-219.7,150.9-357.3,150.9s-256.7-50.3-357.3-150.9 L4037.7,12931c-100.6-100.6-150.9-219.7-150.9-357.3c0-137.6,50.3-256.7,150.9-357.3L8254.1,8000L4037.7,3783.6 c-100.6-100.6-150.9-219.7-150.9-357.3c0-137.6,50.3-256.7,150.9-357.3l1318.1-1318.1c100.6-100.6,219.7-150.9,357.3-150.9 s256.7,50.3,357.3,150.9l5891.8,5891.8c100.6,100.6,150.9,219.7,150.9,357.3C12113.2,8137.6,12062.9,8256.7,11962.3,8357.3 L11962.3,8357.3z"></path>
+            </svg>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            jssor_1_slider_init();
+        </script>
+
+
+
+    -->
+
+
+        <section id="faq" class="light-typo cta p70 seq_faq">
+
+            <div class="container" style="width: 60%;max-width: 100%;BACKGROUND: #ffffff4d;">
+
+                <h1 class="section-title" style="margin-top:0px;"><img src="assets/images/faq_title2.png" alt="FAQ" class="mb0" style="max-width: 100%;"></h1>
+
+
+                <div class="controls">
+                    <p><img src="assets/images/faq_title3.png" class="mb0" style="max-width: 90%;min-width: 90%;"></p>
+                </div>
+
+                <div class="row ">
+
+
+                    <div class="controls">
+
+
+                        <div class="panel-group scrollimation fade-up in" id="accordion" style="height: 500px;overflow-y: auto;width: 100%;max-width: 90%;margin-left:5%;">
+                            <div class="panel panel-default pnl">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        What is the typical team strength of Dream Cine Studio that will be travelling to cover my wedding? Will a reduction in crew affect the cost?<span class="pull-right">
+					<a data-toggle="collapse" data-parent="#accordion" id="abc1" class="open collapsed" onclick="changei(1);" href="#collapse1">+</a></span>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse" style="height: 0px;">
+                                    <div class="panel-body">
+                                        <p class="panel-title">
+                                            We usually film with a crew of 3-4 cinematographers (candid style) and 2-3 photographers (candid and documentary style) along with one director and an aerial drone. The crew works as a team with different cameramen specializing on different lenses and
+                                            styles including aerial and underwater filming. We don’t recommend a reduction in the size of the crew as this is likely to affect the quality of the film. This choreographed, multi-camera setup allows us to
+                                            position ourselves strategically to capture ceremonies more naturally as they take place, without any hindrance.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default pnl">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        What are the common deliverables that we can expect as part of the package?<span class="pull-right">
+					<a data-toggle="collapse" data-parent="#accordion" id="abc2" class="open collapsed" onclick="changei(2);" href="#collapse2">+</a></span>
+                                    </h4>
+                                </div>
+                                <div id="collapse2" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p class="panel-title">In the standard package, we deliver two different wedding films and all digital photographs that include both candid and documentary style. All films and photos are delivered on a 1 or 2 Terabyte Thunderbolt drive
+                                            provided to us by the client. To enable the viewing of these files on a TV or a screen, we also have provisions to deliver the final edited films on pen-drives. The two versions of films include - (1) Full wedding
+                                            Films A 60-90 minute version of the best moments of your wedding blended with your story as narrated by you and your loved ones. (2)- A three-Five minute trailer (2) - A 3-5-minute teaser film that you may release
+                                            on social networking sites for your friends and family to see, reminisce and cherish.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default pnl">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        Can I opt for only still photographs or video or does the package have to include both?<span class="pull-right">
+					<a data-toggle="collapse" data-parent="#accordion" id="abc3" class="open collapsed" onclick="changei(3);" href="#collapse3">+</a></span>
+                                    </h4>
+                                </div>
+                                <div id="collapse3" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p class="panel-title">During a wedding shoot, the stills and the video teams should have harmony and co-ordination for the benefit of client coverage and to avoid getting into each other’s frames. We usually cover both together to ensure
+                                            perfect synchronicity of images andfilm coverage but in rare cases we have accommodated an odd request to allow a photo team to work alongside for wedding coverage.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default pnl">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        Which all locations does Dream Cine Studio team travel to cover weddings?<span class="pull-right">
+					<a data-toggle="collapse" data-parent="#accordion" id="abc4" class="open collapsed" onclick="changei(4);" href="#collapse4">+</a></span>
+                                    </h4>
+                                </div>
+                                <div id="collapse4" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p class="panel-title">All across the world. We love travelling.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default pnl">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        Can Dream Cine Studio prepare a coffee table book or albums of the photographs?<span class="pull-right">
+					<a data-toggle="collapse" data-parent="#accordion" id="abc5" class="open collapsed" onclick="changei(5);" href="#collapse5">+</a></span>
+                                    </h4>
+                                </div>
+                                <div id="collapse5" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p class="panel-title">
+                                            Yes Dream Cine Studio technically printing and designing of photo-books, as a thumb-rule, approximately 200two hundred images per album 50 to 55 sheets can be incorporated into one album. All images are edited (skin blemishes are cleaned and colours are
+                                            enhanced) and album is custom designed to suit your requirements. Each page of album is 17 inches by 24 inches in measurement. The cost of the album varies depending on the quality and brand of printing. Usually
+                                            a top quality album is in the range of`20000-25000.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default pnl">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        Are there any other hidden costs other than the ones mentioned to us prior to sign-off?<span class="pull-right">
+					<a data-toggle="collapse" data-parent="#accordion" id="abc6" class="open collapsed" onclick="changei(6);" href="#collapse6">+</a></span>
+                                    </h4>
+                                </div>
+                                <div id="collapse6" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p class="panel-title">Out of Delhi NCRthe expenses for the travel, food and accommodation for the crew members are borne by the client. In addition, the hard drives and pen drives for the final delivery are paid for by the clients too.
+                                            Any additional days / hours of shooting (not mentioned in contract) shall be charged extra. There are no other hidden costs.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default pnl">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        Who decides the music and film name for the Highlight film?<span class="pull-right">
+					<a data-toggle="collapse" data-parent="#accordion" id="abc7" class="open collapsed" onclick="changei(7);" href="#collapse7">+</a></span>
+                                    </h4>
+                                </div>
+                                <div id="collapse7" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p class="panel-title">Music and songs selection are hand picked collectively by the Director, the client and the Edit team. A client co-ordinator from the studio is assigned to co-ordinate with the client for this under the guidance
+                                            of the creative visualiser of the project. The film names are usually suggested either by the client or the film director and approved by both.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default pnl">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        We want only our choice of music for every event in the film – Is that possible?<span class="pull-right">
+					<a data-toggle="collapse" data-parent="#accordion" id="abc8" class="open collapsed" onclick="changei(8);" href="#collapse8">+</a></span>
+                                    </h4>
+                                </div>
+                                <div id="collapse8" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p class="panel-title">We have always encouraged our couples to send in their choice of songs for the highlight films as per the respective functions but have realized with increasing frequency that with the tremendous variety and range
+                                            of music, we have received inappropriately different kind of songs that don't suit the sensibility of the edit at all. Selecting film music is complicated. We need the right tracks with the perfect highs and
+                                            lows so we can create a story line and seamlessly blend the audios into the music track. Very few tracks come close to that perfection here and its difficult to explain why a track works for the edit. Its in
+                                            this respect we sometimes wish we had a free hand in selecting your songs. However, we do understand that you want to be involved in the selection and be sure that you like the tracks and their feel. Personally
+                                            we love all music. And the effect it has on your mood, the film flow, the happy vibes some tracks create, the highs and lows etc. One of our most favorite things to do as part of structuring your film is to
+                                            select the best possible song for each function of the wedding. We imagine exactly where we would place a certain audio byte and how the next part of the song would perfectly match with the mood. Please be assured
+                                            we were there throughout at the wedding and will only suggest and select songs that match the pace and tempo of the edit. Once this selection is done, we ideally want you to listen to these tracks and should
+                                            you dislike a certain track we want to be able to offer an alternate option for it. We urge you not to have a preconceived notion about the song or the edit. Let us surprise you because we have done this too
+                                            long to make any errors anymore. You are very welcome to suggest your choice of songs but its painful to see a wrong edit just because we said yes to your song. We do understand that you may have an all time
+                                            favorite song and will try our best to include the song but please understand that if we say no to the song it’s just because we don’t want your film to be spoilt on account of a wrong song.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default pnl">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        Can we also have additional photographers / videographers along with Dream Cine Studio?<span class="pull-right">
+					<a data-toggle="collapse" data-parent="#accordion" id="abc9" class="open collapsed" onclick="changei(9);" href="#collapse9">+</a></span>
+                                    </h4>
+                                </div>
+                                <div id="collapse9" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p class="panel-title">No. Please. We absolutely do not recommend it. Apart from being uneconomical, it may obstruct and tamper with our work. The advantage of a single team is that we will get clean, unobstructed visual frames without
+                                            badly dressed / behaved local photographers jumping into our frames and ruining the film moments.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default pnl">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        What is a pre-wedding shoot and how do we go about it?<span class="pull-right">
+					<a data-toggle="collapse" data-parent="#accordion" id="abc10" class="open collapsed" onclick="changei(10);" href="#collapse10">+</a></span>
+                                    </h4>
+                                </div>
+                                <div id="collapse10" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p class="panel-title">A pre-wedding shoot is a photo/video shoot of the couple done before the wedding that portrays the bond they share with each other. Since the wedding is a hectic time to be together, the couple get this day off
+                                            with each other to shoot some "Relaxed, Together & Fun" images and videos in casual outfits (different from the heavy wedding outfits) and this photo/video footage can be used in the highlight film or as a separate
+                                            two-minute pre-wedding film that can be shown during the sangeet or the wedding. A typical pre-wedding shoot lasts between 4-6 hours/day. The clothes / styling / makeup for the pre-wedding shoot is to be arranged
+                                            by you please.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default pnl">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        Is it possible just to get a pre-wedding shoot without opting for the complete wedding package?<span class="pull-right">
+					<a data-toggle="collapse" data-parent="#accordion" id="abc11" class="open collapsed" onclick="changei(11);" href="#collapse11">+</a></span>
+                                    </h4>
+                                </div>
+                                <div id="collapse11" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p class="panel-title">We believe in start to end coverage and hence, stand-alone pre-wedding shoots are not our style. We film pre-wedding shoots for clients whose weddings we have been commissioned to film. This serves as a great start
+                                            to the final highlight film.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default pnl">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        Will there be a singular point of contact during the wedding onsite?<span class="pull-right">
+					<a data-toggle="collapse" data-parent="#accordion" id="abc12" class="open collapsed" onclick="changei(12);" href="#collapse12">+</a></span>
+                                    </h4>
+                                </div>
+                                <div id="collapse12" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p class="panel-title">The film-director or the Director of Photography is your singular point of contact with AMBI MULTIMEDIA. Also, from your side, we would love to have a singular point of contact for all wedding shoot co-ordination.
+                                            The brides / grooms siblings or the best friends are the best people for the job.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default pnl">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        What are audio bytes and why are these important for the quality of the film? How many people can I have in these bytes?<span class="pull-right">
+					<a data-toggle="collapse" data-parent="#accordion" id="abc13" class="open collapsed" onclick="changei(13);" href="#collapse13">+</a></span>
+                                    </h4>
+                                </div>
+                                <div id="collapse13" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p class="panel-title">he primary charm of the wedding video is the footage and just so that the events are nicely interlinked, we film interviews with the close family bytes (Bride, Groom, Parents and Siblings / Best-Friends - usually
+                                            6 frames) so that there is an underlying story that keeps the viewer connected to the film. As the story unfolds, the viewer gets a sense of how the couple met and decided to spend their lives together. For
+                                            this, we film about 60-90 minutes of audio / video bytes with each of the six frames’ people. This is because we can ask the same questions to different people and place the story in a coherent format in the
+                                            edit room. Too many frames and bytes in this case will create an edit hotch-potch of sorts and we have faced these situations in the past. Also, it will make the film byte-heavy and we don’t want that either.
+                                            Not to mention that in the middle of the wedding celebrations, it would be impossible to film so many bytes without compromising the quality of the events coverage. The highlight film is usually 60-90 minutes
+                                            long and the ideal proportion of the bytes and footage is 30:70</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default pnl">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        When and where should the audio bytes be ideally recorded?<span class="pull-right">
+					<a data-toggle="collapse" data-parent="#accordion" id="abc14" class="open collapsed" onclick="changei(14);" href="#collapse14">+</a></span>
+                                    </h4>
+                                </div>
+                                <div id="collapse14" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p class="panel-title">Anywhere with silence in the background. Any time during the wedding. We do not do any interviews / audio bytes after the wedding is over. A rare case exception is understood but usually we lock all interviews on
+                                            the very first day of the wedding as it gets stressful during the later days.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default pnl">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        Can you make the trailer or a short film of the wedding so that we can show it at the Reception / Last day? <span class="pull-right">
+					<a data-toggle="collapse" data-parent="#accordion" id="abc15" class="open collapsed" onclick="changei(15);" href="#collapse15">+</a></span>
+                                    </h4>
+                                </div>
+                                <div id="collapse15" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p class="panel-title">Yes we offer this service - These are referred to as "Same Day Edits" and they are a great way to showcase some of the best moments of the wedding instantly to everyone present. However, this is an expensive process
+                                            (extra equipment and setups are required for an extra editor to produce this) and adds to the final cost of the package.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default pnl">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        What are the numbers of photographs that will be provided in the package? Also the total number of edited photographs and the format in which they would be provided? <span class="pull-right">
+					<a data-toggle="collapse" data-parent="#accordion" id="abc16" class="open collapsed" onclick="changei(16);" href="#collapse16">+</a></span>
+                                    </h4>
+                                </div>
+                                <div id="collapse16" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p class="panel-title">It’s difficult to determine the total number of images we will be shooting over a typical three day wedding. Approximately 3000-4500 images are expected to be shot during a typical three-day wedding. All images
+                                            are given to the client in high resolution JPEG format on a 1 / 2 TB Thunderbolt drive (digital delivery) and ALL the images are colour and exposure edited. The images are shot both in candid and traditional
+                                            style.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default pnl">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        Do we get to see the Highlight Film before the final delivery?<span class="pull-right">
+					<a data-toggle="collapse" data-parent="#accordion" id="abc17" class="open collapsed" onclick="changei(17);" href="#collapse17">+</a></span>
+                                    </h4>
+                                </div>
+                                <div id="collapse17" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p class="panel-title">Once the Highlight film is ready, we invite the couple over for a screening at our studio in Mumbai. Since they are the stars of the film, we want them to see and approve of it first. Should they disapprove of any
+                                            clip / footage during the first screening, we can make the edit changes and corrections (in the one round of permissible edit changes) and present the final HL film for the friends and family to see and enjoy.
+                                            Nothing is delivered / released without the approval of the couple. In case of overseas clients, we deliver a low resolution version of the HL film online through data sharing sites like wetransfer.com. The
+                                            couple can download the film and send us the changes ATMOST within 72 hours. If we do not receive any changes within three days, we will assume that you approve of the film and no changes are required. We will
+                                            then close your project and deliver the high resolution final rendered version of the film. Any changes after the stipulated three day period shall be charged extra.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default pnl">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        Why 72 hours only? Why not within a week-ten days? <span class="pull-right">
+					<a data-toggle="collapse" data-parent="#accordion" id="abc18" class="open collapsed" onclick="changei(18);" href="#collapse18">+</a></span>
+                                    </h4>
+                                </div>
+                                <div id="collapse18" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p class="panel-title">As per the contract, we allot 72 hours for any revisions in the highlight film. This is because around ten machines in the studios contain your project files and are linked to each other for the binding of the whole
+                                            film. Only when we export all project files from these machines, we can move on to the next projects. Its a complex process. Hence the limited time frame of 72 hours per film for any client revisions.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default pnl">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        Why does it take 75-95 days for the delivery of our wedding HL film?<span class="pull-right">
+					<a data-toggle="collapse" data-parent="#accordion" id="abc19" class="open collapsed" onclick="changei(19);" href="#collapse19">+</a></span>
+                                    </h4>
+                                </div>
+                                <div id="collapse19" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p class="panel-title">Film editing is a tedious and creative process and we work with some of the best editors in the industry who are perfectionists and believe in the highest quality of film editing. After seeing hours and hours of
+                                            footage they select the best of the best shots for the HL film and naturally all this takes time. As a thumb-rule, each minute of final edit takes about one day to finalize once the final edit begins. Rest assured,
+                                            once you see your final HL film, the wait will be well worth the time.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default pnl">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        What is the one round of permissible change allowed once we see the Highlight film?<span class="pull-right">
+					<a data-toggle="collapse" data-parent="#accordion" id="abc20" class="open collapsed" onclick="changei(20);" href="#collapse20">+</a></span>
+                                    </h4>
+                                </div>
+                                <div id="collapse20" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p class="panel-title">One round of changes in the Highlight film means that once the couple sees the film for the first time, they can add / delete some clips as per their liking. Some close relatives whose footage is unintentionally
+                                            missed by the editors can be added in this round. Any other minor changes can also be corrected. But please note that major changes may not be possible / charged extra. Examples of major changes are - • Addition
+                                            of an event / events • Changes in music track • Replacement of more than ten clips of friends / relatives • Changes in the film titles / credits etc</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default pnl">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        How is the film delivered to us?<span class="pull-right">
+					<a data-toggle="collapse" data-parent="#accordion" id="abc21" class="open collapsed" onclick="changei(21);" href="#collapse21">+</a></span>
+                                    </h4>
+                                </div>
+                                <div id="collapse21" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p class="panel-title">Blue-rays and DVDs are fast going out of fashion. So much so that the latest computer systems don’t even have DVD readers anymore! With everything moving online, DVD’s are obsolete and so in keeping up with the
+                                            latest trend, our deliveries are done on USB drives with customized cases. Such pen drives allow you to easily share your film with your family and friends, upload it online, and make as many copies as you like.
+                                            Also, the quality of film delivered on the USB is much higher than that of DVD or Blu-Ray</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default pnl">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        Do we get the raw footage? How it is usually delivered?<span class="pull-right">
+					<a data-toggle="collapse" data-parent="#accordion" id="abc22" class="open collapsed" onclick="changei(22);" href="#collapse22">+</a></span>
+                                    </h4>
+                                </div>
+                                <div id="collapse22" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p class="panel-title">Everything that has been shot by us is your property. We don’t hold back anything. You get all the RAW videos as well as the final videos on a 1 or 2 Terabyte Thunderbolt drive provided by you. The RAW videos are
+                                            clips of the videos shot by all our cameras (They may be useful for edits later like first anniversary / 25th anniversary etc.)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default pnl">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        Will our trailer or Highlight film be released on Social Media as well?<span class="pull-right">
+					<a data-toggle="collapse" data-parent="#accordion" id="abc23" class="open collapsed" onclick="changei(23);" href="#collapse23">+</a></span>
+                                    </h4>
+                                </div>
+                                <div id="collapse23" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p class="panel-title">Highlight films are usually uploaded on our Vimeo&YouTube channel at a nominal cost. We do not release / upload the highlight films on our YouTube / Facebook page. Trailers are shorter, truncated versions and more
+                                            exciting videos and hence we release them worldwide on our YouTube / Facebook page. However, the release depends on a few factors. Firstly, we do not release trailers of couples who don’t want them to be shown
+                                            publicly. We respect your privacy but this clause has to be specified at the time of signing the contract. Secondly, according to our agreement with social networking sites, there is a budget allocated for the
+                                            release and promotion of each trailer that we put up. Details provided on request.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default pnl">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        What if the delivery is delayed by Dream Cine Studio?<span class="pull-right">
+					<a data-toggle="collapse" data-parent="#accordion" id="abc24" class="open collapsed" onclick="changei(24);" href="#collapse24">+</a></span>
+                                    </h4>
+                                </div>
+                                <div id="collapse24" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p class="panel-title">It is rare that the delivery of the film is delayed beyond 100 days. But it is possible that the director of film is unhappy with some portions of the film and requests for a revision / re-edit - in which case a
+                                            delay might happen. All we can say is that it is for the benefit of the film and the client. Most great cinema blockbusters have been delayed but have turned out better due to the re-edit. So its all in good
+                                            spirit. We apologies for the inconvenience (should a delay happen) but assure you that we will not release anything that we don’t absolutely adore. So please be patient and give us time to work our magic.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default pnl">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        Can we come and see the RAW footage and select our shots?<span class="pull-right">
+					<a data-toggle="collapse" data-parent="#accordion" id="abc25" class="open collapsed" onclick="changei(25);" href="#collapse25">+</a></span>
+                                    </h4>
+                                </div>
+                                <div id="collapse25" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p class="panel-title">We shoot thousands and thousands of film clips from multiple cameras and occasionally the total duration of these RAW clips exceeds 50-60 hours of footage for a typical three-day wedding. At the studio, these clips
+                                            undergo careful conversion and screening and a battery of editors work night and day to create a first cut of the best clips for the chief editor. This process is almost factory-like with editor stations brimming
+                                            with activity through odd hours. Client interference at this stage not only delays the final edit by double but also disrupts the Zen-like concentration of the editors going through the footage in their own
+                                            space and time. Therefore, we strictly do not permit clients to sit through RAW footage selection. This is the reason we have one round of edit changes. In case the couple is unhappy with some footage he / she
+                                            can communicate this after the first screening of their film and the changes will be incorporated.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default pnl">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        What is the estimated time of delivery of all deliverables? What do you need from us after the wedding for the completion of the project?<span class="pull-right">
+					<a data-toggle="collapse" data-parent="#accordion" id="abc26" class="open collapsed" onclick="changei(26);" href="#collapse26">+</a></span>
+                                    </h4>
+                                </div>
+                                <div id="collapse26" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p class="panel-title">As per the contract we deliver everything within 45 to 90 days after the wedding. This means the simpler deliverables like images are delivered within 35-45 days after the wedding depending on the seasonal work
+                                            load especially during the peak wedding season when we could run into a backlog of 15-20 days. The highlight film and trailer usually take up to 75-95 days for the delivery. We need two basic documents from
+                                            the couple for the completion of the Highlight film in time - First is their music selection (various sound tracks you want for various sections / events of the film) and second is the credits title (family
+                                            names) for the opening and closing sections of the film. A delay in the submission of these documents will exponentially delay the delivery dates of the highlight film. As a thumb-rule, we expect to receive
+                                            these two documents from the couple within 40-45 days after the wedding.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+
+
+
+            </div>
+
+        </section>
+        <section class="color-bg bg3 light-typo cta p70" style="padding: 20px 0px;  background-image:url('images/contactbg.jpg')">
+
+
+            <div class="container" style="width: 85%; padding-bottom:50px;">
+                <p class="text-center scrollimation fade-up in"><img src="assets/images/tellus.png" style="max-width:100%;padding-top:40px;padding-bottom:20px;" class="mb0"></p>
+                <div class="row scrollimation fade-right in">
+
+                    <!--=== Contact Form ===-->
+
+
+                    <div class="col-sm-8 col-sm-offset-2" id="contactform">
+
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-xs-6">
+
+                                    <div class="controls">
+                                        <input name="ctl00$ContentPlaceHolder1$TxtBride" type="text" maxlength="100" id="ctl00_ContentPlaceHolder1_TxtBride" placeholder="Name of the Bride" class="form-control" />
+                                        <span id="ctl00_ContentPlaceHolder1_RequiredFieldValidator2" style="color:Red;visibility:hidden;">*</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-xs-6">
+
+                                    <div class="controls">
+                                        <input name="ctl00$ContentPlaceHolder1$TxtGroom" type="text" id="ctl00_ContentPlaceHolder1_TxtGroom" placeholder="Name of the Groom" class="form-control requiredField" />
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <div class=" controls">
+                                <input name="ctl00$ContentPlaceHolder1$TxtStory" type="text" id="ctl00_ContentPlaceHolder1_TxtStory" placeholder="Your Story" class="form-control " />
+
+                            </div>
+                        </div>
+                        <!-- End email input -->
+
+                        <div class="form-group">
+
+                            <div class=" controls">
+                                <input name="ctl00$ContentPlaceHolder1$TxtEventsDate" type="text" id="ctl00_ContentPlaceHolder1_TxtEventsDate" placeholder="Event Dates" class="form-control " />
+
+                            </div>
+                        </div>
+                        <!-- End email input -->
+
+                        <div class="form-group">
+
+                            <div class=" controls">
+                                <input name="ctl00$ContentPlaceHolder1$TxtLocation" type="text" id="ctl00_ContentPlaceHolder1_TxtLocation" placeholder="Venue / Location / City of the event" class="form-control requiredField" />
+
+                            </div>
+                        </div>
+                        <!-- End email input -->
+
+
+
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-xs-6">
+
+                                    <div class="controls">
+                                        <input name="ctl00$ContentPlaceHolder1$Textemail" type="text" id="ctl00_ContentPlaceHolder1_Textemail" placeholder="Email" class="form-control requiredField" />
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-xs-6">
+
+                                    <div class="controls">
+                                        <input name="ctl00$ContentPlaceHolder1$Txtphone" type="text" id="ctl00_ContentPlaceHolder1_Txtphone" placeholder="Phone" class="form-control requiredField" />
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End name input -->
+
+
+                        <div class="form-group">
+
+                            <div class=" controls">
+                                <textarea name="ctl00$ContentPlaceHolder1$Txtmessage" rows="2" cols="20" id="ctl00_ContentPlaceHolder1_Txtmessage" placeholder="Your message" class="form-control "></textarea>
+
+
+                            </div>
+                        </div>
+                        <!-- End email input -->
+                        <div class="form-group">
+
+                            <input type="file" name="ctl00$ContentPlaceHolder1$FileUpload1" id="ctl00_ContentPlaceHolder1_FileUpload1" class="form-control" onchange="document.getElementById('addphotos').value=this.value;" style="display:none;" />
+                            <div class=" controls">
+                                <input id="addphotos" readonly onclick="document.getElementById('ctl00_ContentPlaceHolder1_FileUpload1').click();" name="photo" placeholder="Add Photos ( Please attach a  images of yourself and let us put face to your story )" style="background-image:url('assets/images/attachment.png');background-repeat: no-repeat;background-position:right;
+                                     overflow:hidden;cursor:pointer;" class="form-control" type="text">
+                            </div>
+                        </div>
+
+
+
+
+
+                        <p class="text-center">
+                            <input type="submit" name="ctl00$ContentPlaceHolder1$Button2" value="Send Message" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$Button2&quot;, &quot;&quot;, true, &quot;as&quot;, &quot;&quot;, false, false))"
+                                id="ctl00_ContentPlaceHolder1_Button2" class="btn btn-quattro" style="background: #800a46; float:right;" />
+
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </section>
+
+        <script type="text/javascript">
+            //<![CDATA[
+            var Page_Validators = new Array(document.getElementById("ctl00_ContentPlaceHolder1_RequiredFieldValidator1"), document.getElementById("ctl00_ContentPlaceHolder1_RequiredFieldValidator2"));
+            //]]>
+        </script>
+
+        <script type="text/javascript">
+            //<![CDATA[
+            var ctl00_ContentPlaceHolder1_RequiredFieldValidator1 = document.all ? document.all["ctl00_ContentPlaceHolder1_RequiredFieldValidator1"] : document.getElementById("ctl00_ContentPlaceHolder1_RequiredFieldValidator1");
+            ctl00_ContentPlaceHolder1_RequiredFieldValidator1.controltovalidate = "ctl00_ContentPlaceHolder1_Txtpass";
+            ctl00_ContentPlaceHolder1_RequiredFieldValidator1.errormessage = "*";
+            ctl00_ContentPlaceHolder1_RequiredFieldValidator1.validationGroup = "p";
+            ctl00_ContentPlaceHolder1_RequiredFieldValidator1.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+            ctl00_ContentPlaceHolder1_RequiredFieldValidator1.initialvalue = "";
+            var ctl00_ContentPlaceHolder1_RequiredFieldValidator2 = document.all ? document.all["ctl00_ContentPlaceHolder1_RequiredFieldValidator2"] : document.getElementById("ctl00_ContentPlaceHolder1_RequiredFieldValidator2");
+            ctl00_ContentPlaceHolder1_RequiredFieldValidator2.controltovalidate = "ctl00_ContentPlaceHolder1_TxtBride";
+            ctl00_ContentPlaceHolder1_RequiredFieldValidator2.errormessage = "*";
+            ctl00_ContentPlaceHolder1_RequiredFieldValidator2.validationGroup = "as";
+            ctl00_ContentPlaceHolder1_RequiredFieldValidator2.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+            ctl00_ContentPlaceHolder1_RequiredFieldValidator2.initialvalue = "";
+            //]]>
+        </script>
+
+
+        <script type="text/javascript">
+            //<![CDATA[
+            checkdevice();
+            var Page_ValidationActive = false;
+            if (typeof(ValidatorOnLoad) == "function") {
+                ValidatorOnLoad();
+            }
+
+            function ValidatorOnSubmit() {
+                if (Page_ValidationActive) {
+                    return ValidatorCommonOnSubmit();
+                } else {
+                    return true;
+                }
+            }
+
+            theForm.oldSubmit = theForm.submit;
+            theForm.submit = WebForm_SaveScrollPositionSubmit;
+
+            theForm.oldOnSubmit = theForm.onsubmit;
+            theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
+            //]]>
+        </script>
+    </form>
+
+
+    <a name="footer"></a>
+    <footer class="main-footer">
+
+        <!--Footer Upper-->
+        <div class="footer-upper">
+            <!--Go Up Button-->
+            <div class="go-up">
+                <div class="curve scroll-to-target" data-target="#myCarousel"><span class="icon fa fa-arrow-up"></span></div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 col-xs-12 column" style="text-align">
+
+
+
+
+                        <img src="images/aboutlogo.png" alt="logo" style="width:72%" />
+
+
+
+
+
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 col-xs-12 column">
+                        <div class="footer-widget links" style="text-align:left">
+                            <h2 style="text-align:left">Useful Links</h2>
+                            <ul style="text-align:left">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="drone.html">Drone</a></li>
+                                <li><a href="About.html">About</a></li>
+                                <li><a href="Photography.html">Photography</a></li>
+                                <li><a href="Multimediacat.html">Multimedia</a></li>
+                                <li><a href="Contact.html">Contact</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-sm-6 col-xs-12 column">
+                        <div style="text-align:justify">
+                            <h2>CONTACT INFORMATION</h2>
+
+                            <ul style="line-height:25px">
+                                <li style="line-height: 30px;"><span class="fa fa-phone" style="margin-right:10px;"></span>7977441585 , 8271684012</li>
+
+                                <li style="line-height: 30px;"><span class="fa fa-map-marker" style="margin-right:14px"></span>Head Office: Goregaon west, Dream Cine Studio, Motilal Nagar , <br /><span style="margin-right:24px;"></span> No.1 Road No.6 Mumbai(PINCODE)</li>
+
+                                <li style="line-height: 30px;"><span class="fa fa-map-marker" style="margin-right:14px"></span>Branch office: Patna, Bihar(PINCODE)r</li>
+
+                                <li style="line-height: 30px;"><span class="fa fa-envelope" style="margin-right:10px"></span>dreamcinestudio@gmail.com </li>
+
+                                <li style="line-height: 30px;"><span class="fa fa-globe" style="margin-right:10px"></span>http://www.dreamcinestudio.com/</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--Footer Bottom-->
+        <div class="footer-bottom">
+            <div class="auto-container">
+                <!--Copyright-->
+                <div class="copyright">2020 &copy; Dream Cine Studio <br /> Designed & Developed by <a href="https://ss4tech.in" target="_blank" style="position: relative;
+    color: #ffffff;
+    background: #800a46;
+    border-radius: 10px;
+    padding: 5px;">Smart Solutions Technology</a>
+                </div>
+
+                <div class="social-links">
+                    <a href="#" class="whatsapp" style="border:none"><img src="images/facebook.png" style="height:45px" /></a>&nbsp;&nbsp;
+                    <a href="#" class="whatsapp" style="border:none"><img src="images/twitter-2.png" style="height:45px" /></a>&nbsp;&nbsp;
+                    <a href="#" class="whatsapp" style="border:none"><img src="images/instagram.png" style="height:45px" /></a>&nbsp;&nbsp;
+                    <a href="#" class="whatsapp" style="border:none"><img src="images/youtube.png" style="height:45px" /></a>&nbsp;&nbsp;
+                    <a href="#" class="whatsapp" style="border:none"><img src="images/google-plus.png" style="height:45px" /></a>&nbsp;&nbsp;
+                    <a href="#" class="whatsapp" style="border:none"><img src="images/0wtsaap.png" style="height:45px" /></a>&nbsp;&nbsp;
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="assets/js/libs/jquery-1.8.2.min.js">\x3C/script>')
+    </script>
+    <!-- GOOGLE Markup Start-->
+
+    <!-- GOOGLE Markup End-->
+    <script src="assets/js/libs/bootstrap.min.js"></script>
+    <script src='assets/js/jquery.easing.1.3.min.js'></script>
+    <script src='assets/js/jquery.scrollto.js'></script>
+    <script src='assets/js/jquery.flexslider.min.js'></script>
+    <script src='assets/js/jquery.stellar.js'></script>
+    <script src="assets/js/jquery.masonry.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/waypoints-sticky.min.js"></script>
+    <script src="assets/js/jquery.countTo.js"></script>
+    <script src="assets/js/contact.js"></script>
+    <script src="assets/js/quattro.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+    <script src="code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/js-collection.js"></script>
+    <script src="js/flipclock.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
