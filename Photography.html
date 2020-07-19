@@ -53,8 +53,24 @@
     <script type="text/javascript" src="assets/js/libs/modernizr.min.js"></script>
     <script type="text/javascript" async defer src="apis.google.com/js/platformb27b.js?publisherid=103752406404879322348">
     </script>
+    <style>
+        .nav {
+            background-color: black;
+        }
+    </style>
 
 </head>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("site-nav");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
 
 <body data-spy="scroll" data-target="#main-nav" data-offset="400" style="background: #ffffff;">
 
@@ -66,7 +82,7 @@
                 <div class="col-sm-2">
                     <div class="navbar-header w_100">
 
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#site-nav">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#site-nav" onclick="myFunction()">
                                 <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                             
                         </button>
@@ -331,9 +347,9 @@
                             <ul style="line-height:25px">
                                 <li style="line-height: 30px;"><span class="fa fa-phone" style="margin-right:10px;"></span>7977441585 , 8271684012</li>
 
-                                <li style="line-height: 30px;"><span class="fa fa-map-marker" style="margin-right:14px"></span>Head Office: Goregaon west, Dream Cine Studio, Motilal Nagar , <br /><span style="margin-right:24px;"></span> No.1 Road No.6 Mumbai(PINCODE)</li>
+                                <li style="line-height: 30px;"><span class="fa fa-map-marker" style="margin-right:14px"></span>Head Office: Goregaon west, Dream Cine Studio, Motilal Nagar , <br /><span style="margin-right:24px;"></span> No.1 Road No.6 Mumbai-400104</li>
 
-                                <li style="line-height: 30px;"><span class="fa fa-map-marker" style="margin-right:14px"></span>Branch office: Patna, Bihar(PINCODE)r</li>
+                                <li style="line-height: 30px;"><span class="fa fa-map-marker" style="margin-right:14px"></span>Branch office: Patna, Bihar-800001</li>
 
                                 <li style="line-height: 30px;"><span class="fa fa-envelope" style="margin-right:10px"></span>dreamcinestudio@gmail.com </li>
 
