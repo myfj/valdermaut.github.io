@@ -478,7 +478,7 @@ li {
 }
 
 .thm-btn {
-    background: #800a46;
+    background: white;
     border-radius: 30px;
     display: inline-block;
     color: #fff;
@@ -498,20 +498,20 @@ li {
 .thm-btn:hover,
 .thm-btn.inverse {
     background-color: #fff;
-    border-color: #800a46;
-    color: #800a46;
+    border-color: #ffffff;
+    color: #f8f6f7;
 }
 
 .thm-btn:active,
 .thm-btn:focus {
     background-color: #fff;
-    border-color: #800a46;
-    color: #800a46;
+    border-color: #fffeff;
+    color: #fdfbfc;
 }
 
 .thm-btn.inverse:hover {
-    background: #800a46;
-    border-color: #800a46;
+    background: #fdfdfd;
+    border-color: #fdfdfd;
     color: #fff;
 }
 
@@ -5144,7 +5144,7 @@ ul.list li {
 .department .department-details {
     background-color: #fbf7f8;
     bottom: -65px;
-    padding: 0 15px 20px;
+    padding: 0 15px 50px;
     position: absolute;
     text-align: center;
     transition: all 0.3s ease;
